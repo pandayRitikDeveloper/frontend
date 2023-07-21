@@ -1,0 +1,98 @@
+.containerDivider{
+ display: flex;
+ width: calc(33.33% - 10px); 
+}
+
+.container {
+    flex: 0 0 calc(33.33% - 10px); /* Each element occupies one-third of the container's width with some spacing */
+    box-sizing: border-box;
+  margin-left: 50px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .product-info {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .prices {
+    margin-bottom: 10px;
+  }
+  
+  .original-price {
+    color: #999;
+    font-size: 16px;
+  }
+  
+  .discounted-price {
+    color: #00a000;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .discount {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .quantity {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .action-btn {
+    background-color: #f00;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .action-btn:hover {
+    background-color: #c00;
+  }
+  
+  .product-name {
+    font-weight: bold;
+  }
+  .subtotal {
+    margin-top: 15px;
+  }
+  .shipping {
+    margin-top: 15px;
+  }
+  .total {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .container {
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  .place-order-btn {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .place-order-btn:hover {
+    background-color: #c00;
+  }

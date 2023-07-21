@@ -1,0 +1,64 @@
+<div class="containerDivider">
+<div class="container" *ngFor="let burgerData of products">
+    <div class="product-info" >
+        <div class="product-name">{{ burgerData.productName }}</div>
+      <div class="prices">
+        <div class="original-price">Original Price: ${{ burgerData.productPrice }}</div>
+        <div class="discounted-price">Discounted Price: ${{ burgerData.descountAmount }}</div>
+      </div>
+      <div class="discount">Discount: {{ burgerData.descountPercentage }}%</div>
+      <div class="quantity">Quantity: {{ burgerData.quantity }}</div>
+    </div>
+  
+    <div class="actions">
+      <button class="action-btn" (click)="addToWishlist()">Move To Wishlist</button>
+      <button class="action-btn" (click)="removeFromCart()">Remove for Shopping</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <h2>Your Order Summary</h2>
+  <div class="product">
+    <div class="product-name">Garlic Burger</div>
+    <div class="product-price">$15.00</div>
+  </div>
+  <div class="product">
+    <div class="product-name">Vegetable Pizza</div>
+    <div class="product-price">$15.00</div>
+  </div>
+
+  <div class="delivery-mode">
+    <p>Select delivery Mode</p>
+    <input type="radio" id="takeaway" name="delivery" value="takeaway">
+    <label for="takeaway">Take Away</label>
+    <br>
+    <input type="radio" id="home-delivery" name="delivery" value="home-delivery">
+    <label for="home-delivery">Home Delivery</label>
+  </div>
+
+  <div class="payment-mode">
+    <p>Select Payment Mode</p>
+    <input type="radio" id="cards" name="payment" value="cards">
+    <label for="cards">Cards</label>
+    <br>
+    <input type="radio" id="third-party" name="payment" value="third-party">
+    <label for="third-party">3rd party payment gateways like PayPal & PayBill</label>
+    <br>
+    <input type="radio" id="cod" name="payment" value="cod">
+    <label for="cod">COD (Cash on Delivery)</label>
+  </div>
+
+  <div class="subtotal">
+    <p>Subtotal: $15.00</p>
+  </div>
+  <div class="shipping">
+    <p>Shipping: $15.00</p>
+  </div>
+  <div class="total">
+    <p>Total: $15.00</p>
+  </div>
+
+  <button class="place-order-btn">PLACE ORDER</button>
+</div>
