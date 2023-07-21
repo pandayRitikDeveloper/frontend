@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class AuthService {
   private apiUrl = 'http://localhost:3000/api'; // Replace this with your API endpoint
   private userLocalStorageKey = 'loggedInUser';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private router:Router) { }
 
   login(username: string, password: string): Observable<any> {
     const body = { email:username, password:password };
@@ -35,5 +36,7 @@ export class AuthService {
   // Log out the user by removing the stored user details
   logout(): void {
     localStorage.removeItem(this.userLocalStorageKey);
+    this.router.navigate(['/']);
+          
   }
 }

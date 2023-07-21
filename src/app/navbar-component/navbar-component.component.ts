@@ -11,5 +11,7 @@ export class NavbarComponentComponent {
   constructor(private authService:AuthService){
     this.login=authService.isLoggedIn();
   }
- 
+ logout(){
+  this.authService.logout();
+ }
 }
